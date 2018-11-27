@@ -1,0 +1,148 @@
+#weather {
+	width: 100%;
+	min-width:1024px;
+	height: 100vh;
+	overflow: hidden;
+	color: #ededed;
+	background: #15171c;
+}
+
+#weather .wrap {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+#weather .wrap header {
+	width: 100%;
+	height: 40px;
+
+	line-height: 40px;
+	text-align: left;
+	padding-left: 30px;
+}
+
+
+
+section {
+	padding-top: 20px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	box-sizing: border-box;
+
+}
+
+section .content {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	display: block;
+
+}
+/*
+section .content.block {
+	display: block;
+}
+*/
+
+section .content .contentTop {
+	width: 100%;
+	height: 120px;
+
+	line-height: 40px;
+	text-align: center;
+
+}
+
+section .content .contentTop span {
+	display: block;
+	line-height: 80px;
+	color: white;
+	font-weight: 800;
+	font-size: 30px;
+}
+
+section .weatherWrap {
+	padding-top: 100px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+
+}
+
+section .weatherWrap .card {
+	width: 120px;
+	height: 280px;
+	margin: 2px;
+
+background: #b5bdc8; /* Old browsers */
+background: -moz-linear-gradient(top, #b5bdc8 0%, #28343b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #b5bdc8 0%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #b5bdc8 0%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+
+}
+
+section .weatherWrap .card > div {
+	width: 100%;
+	height: 60px;
+	line-height: auto;
+	text-align: center;
+	color: white;
+	font-weight: 500;
+	font-size: 18px;
+	box-sizing: border-box;
+
+}
+
+section .weatherWrap .card .common {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+section .weatherWrap .card .common.center {
+	text-align: center;
+	
+}
+section .weatherWrap .card .weather {
+	width: 100%;
+	height: 55px;
+
+}
+
+
+section .weatherWrap .card .weather .w_icon {
+	width: 100%;
+	height: auto;
+	margin: 5px 0;
+	text-align: center;
+}
+
+section .weatherWrap .card .weather .w_icon img.icon {
+	margin: 0 auto;
+}
+
+section .weatherWrap .card .smlIcon {
+	width: 25px;
+	height: 25px;
+	padding-right: 10px;
+}
+
+footer {
+	border-top: 2px solid lightgrey;
+
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+
+}

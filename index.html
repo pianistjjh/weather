@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Weather</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+	<div id="weather">
+		<div class="wrap">
+			<header>
+				24 Hours Weather Forecast
+			</header>
+			<section>
+				<div class="content">
+					<div class="contentTop">
+						Your current location is: <span>{{city}} {{country}}</span>
+					</div>
+					<div class="weatherWrap">
+						<div class="card" v-for="(weatherLi, key) in weatherLi.slice(0, 9)">
+							<div class="weather" v-for="(weather, key) in weatherLi.weather">
+								<div class="w_icon">
+									<img class="icon" v-bind:src="'https://openweathermap.org/img/w/'+weather.icon+'.png'">
+								</div>
+							</div>
+							<div class="temp"> {{ weatherLi.main.temp }}<span>&#8451;</span></div>
+							<div class="weather" v-for="(weather, key) in weatherLi.weather">
+								<div>
+									{{ weather.description}}</div>
+							</div>
+							<div class="humidity common">
+								<img class="smlIcon" src="img/humidity.svg">{{weatherLi.main.humidity}} %</div>
+							<div class="windSpeed common">
+								<img class="smlIcon" src="img/wind.svg">{{weatherLi.wind.speed}} m/s
+							</div>
+							<div class="center common" id="time">{{weatherLi.dt_txt.slice(10,16)}} </div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
